@@ -178,16 +178,28 @@
             <h2>Galería de Fotos</h2>
             <p>Explora nuestros momentos especiales. Haz clic en cualquier imagen para verla en grande.</p>
         </div>
-        <div class="gallery-container" style="margin-top: 20px;">
+        <div class="gallery-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;">
             <div class="gallery" style="display: flex; overflow: hidden; white-space: nowrap; border-radius: 10px;">
-                <img src="IMG_4204.jpeg" alt="Foto 1" onclick="openModal(0)" style="width: 33%; max-width: 150px; height: auto; margin: 5px; cursor: pointer;">
-                <img src="IMG_3884.jpeg" alt="Foto 2" onclick="openModal(1)" style="width: 33%; max-width: 150px; height: auto; margin: 5px; cursor: pointer;">
-                <img src="IMG_2991.jpeg" alt="Foto 3" onclick="openModal(2)" style="width: 33%; max-width: 150px; height: auto; margin: 5px; cursor: pointer;">
-                <img src="ecfff670-1bda-4267-8c00-6b7a90a4e84c.jpeg" alt="Foto 4" onclick="openModal(3)" style="width: 33%; max-width: 150px; height: auto; margin: 5px; cursor: pointer;">
+                <div style="flex: 1 1 calc(25% - 10px); max-width: calc(25% - 10px);">
+                    <img src="IMG_4204.jpeg" alt="Foto 1" onclick="openModal(0)" style="width: 100%; border-radius: 10px; cursor: pointer;">
+                </div>>
+                <div style="flex: 1 1 calc(25% - 10px); max-width: calc(25% - 10px);">
+                    <img src="IMG_3884.jpeg" alt="Foto 2" onclick="openModal(1)" style="width: 100%; border-radius: 10px; cursor: pointer;">
+                </div>
+                <div style="flex: 1 1 calc(25% - 10px); max-width: calc(25% - 10px);">
+                    <img src="IMG_2991.jpeg" alt="Foto 3" onclick="openModal(2)" style="width: 100%; border-radius: 10px; cursor: pointer;">
+                </div>
+                <div style="flex: 1 1 calc(25% - 10px); max-width: calc(25% - 10px);">
+                    <img src="ecfff670-1bda-4267-8c00-6b7a90a4e84c.jpeg" alt="Foto 4" onclick="openModal(3)" style="width: 100%; border-radius: 10px; cursor: pointer;">
+                </div>
             </div>
         </div>
     </section>
     
+
+    
+
+
     <div class="modal" id="photoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center;">
         <span class="close" onclick="closeModal()" style="position: absolute; top: 20px; right: 20px; font-size: 2rem; color: #fff; cursor: pointer;">&times;</span>
         <span class="arrow left" onclick="prevImage()" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); font-size: 2rem; color: #fff; cursor: pointer;">&#10094;</span>
