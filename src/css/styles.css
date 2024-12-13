@@ -60,6 +60,7 @@ body {
 }
 
 .info-item h3 {
+  font-family: 'Sarcolenta';
   font-size: 1.8rem;
   margin-bottom: 10px;
 }
@@ -72,6 +73,7 @@ body {
 }
 
 .info-item p {
+  font-family: 'Sarcolenta';
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
@@ -96,6 +98,7 @@ body {
 }
 
 .gallery-section h2 {
+  font-family: 'Sarcolenta';
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #000000;
@@ -178,6 +181,7 @@ body {
 
 
 .header {
+  font-family: 'Sarcolenta';
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -191,12 +195,13 @@ body {
 }
 
 .title-section {
+  
   animation: fadeIn 2s ease-in-out; /* Animación de entrada */
 }
 
 .title {
   font-size: 4rem;
-  font-family: 'Sarcolenta', cursive;
+  font-family: 'Sarcolenta';
   color: #d97350;
   margin: 0;
   animation: textFocusIn 1.5s ease-in-out;
@@ -204,7 +209,7 @@ body {
 
 .subtitle {
   font-size: 1.8rem;
-  font-family: 'Sarcolenta', cursive;
+  font-family: 'Sarcolenta';
   color: #5a4a42;
   margin-top: 10px;
   animation: textFocusIn 1.5s ease-in-out;
@@ -230,6 +235,7 @@ body {
 /* GIFT SECTION */
 
 .gift-section {
+  font-family: 'Sarcolenta';
   text-align: center;
   padding: 40px 20px;
   background: var(--background-dark); /* Usa la variable de color de fondo oscuro */
@@ -242,6 +248,7 @@ body {
 }
 
 .gift-section h2 {
+  font-family: 'Sarcolenta';
   font-size: 2.5rem;
   color: var(--primary-color); /* Resalta con el color principal */
   margin-bottom: 20px;
@@ -368,5 +375,13 @@ body {
   to {
       opacity: 1;
       transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  body::before {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
   }
 }
