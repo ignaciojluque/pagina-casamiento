@@ -9,7 +9,7 @@ body {
   padding: 0;
   background: url('../../assets/images/savetedate.jpeg') center/cover no-repeat;
   background-attachment: fixed;
-  background-blend-mode: multiply;
+
   color: #333;
   min-height: 100vh;
   overflow-x: hidden;
@@ -379,9 +379,10 @@ body {
 }
 
 @media (max-width: 768px) {
-  body::before {
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
+  container {
+      background: url('../../assets/images/savetedate.jpeg') center/cover no-repeat;
+      background-size: 100% auto; /* Obliga que la imagen ocupe todo el ancho */
+      height: 100vh; /* Asegura que el fondo ocupe toda la altura del viewport */
+      background-attachment: scroll; 
   }
 }
