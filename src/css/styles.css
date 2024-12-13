@@ -380,7 +380,7 @@ body {
 
 @media (max-width: 768px) {
   container {
-      background: url('../../assets/images/savetedate.jpeg') center/cover no-repeat;
+      background: url('../../assets/images/san_vicente.png') center/cover no-repeat;
       background-size: 100% auto; /* Obliga que la imagen ocupe todo el ancho */
       height: 100vh; /* Asegura que el fondo ocupe toda la altura del viewport */
       background-attachment: scroll; 
