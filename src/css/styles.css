@@ -223,10 +223,8 @@ body {
   font-family: 'Sarcolenta';
   font-size: 1.5rem;
   color:  #d97350;
-  animation: fadeInUp  ease-in-out s; /* Efecto sutil de subida */
+  animation: fadeInUp  4s ease-in-out; /* Efecto sutil de subida */
 }
-
-
 
 
 /* GIFT SECTION */
