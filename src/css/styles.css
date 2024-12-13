@@ -1,0 +1,374 @@
+@font-face {
+  font-family: 'Sarcolenta';
+  src: url('../fonts/Sarcolenta.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Sarcolenta';
+  margin: 0;
+  padding: 0;
+  background: url('../../assets/images/savetedate.jpeg') center/cover no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  color: #333;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+.flecha-continuar {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  animation: bounce 1.5s infinite;
+  color: #d97350;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+.section {
+  padding: 20px;
+  margin: 20px 0;
+  background: rgba(247, 235, 225, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+  text-align: center;
+  padding: 40px 20px;
+  color: #fff; /* Texto claro para que resalte sobre el fondo */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Sombra para mejorar legibilidad */
+}
+
+.info-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  margin-bottom: 40px;
+}
+
+.info-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.info-item img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.info-item p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.info-item a {
+  color: hsl(39, 96%, 67%); /* Color de enlace que contraste con el fondo */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+.gallery-section {
+  text-align: center;
+  padding: 40px 20px;
+  color: #fff;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  object-fit: cover; /* Asegura que todas las imágenes tengan el mismo tamaño */
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(2.2);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.arrow.prev {
+  left: 10px;
+}
+
+.arrow.next {
+  right: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Ocupa toda la pantalla */
+  background: linear-gradient(to bottom, rgba(255, 198, 152, 0.9), rgba(245, 205, 215, 0.8)), 
+              url('../../assets/images/giuli_anillo.jpeg') center/cover no-repeat;
+  color: #5a4a42;
+  overflow: hidden;
+}
+
+.title-section {
+  animation: fadeIn 2s ease-in-out; /* Animación de entrada */
+}
+
+.title {
+  font-size: 4rem;
+  font-family: 'Sarcolenta', cursive;
+  color: #d97350;
+  margin: 0;
+  animation: textFocusIn 1.5s ease-in-out;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-family: 'Sarcolenta', cursive;
+  color: #5a4a42;
+  margin-top: 10px;
+  animation: textFocusIn 1.5s ease-in-out;
+}
+
+.flecha-continuar {
+  font-size: 2.5rem;
+  color: #d97350;
+  margin-top: 20px;
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+}
+
+.quote {
+  margin-top: 20px;
+  font-family: 'Sarcolenta';
+  font-size: 1.5rem;
+  color:  #d97350;
+  animation: fadeInUp  ease-in-out s; /* Efecto sutil de subida */
+}
+
+
+
+
+/* GIFT SECTION */
+
+.gift-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--background-dark); /* Usa la variable de color de fondo oscuro */
+  color: var(--text-light);
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 800px; /* Limita el ancho para un diseño más limpio */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideFadeIn 2s ease-in-out; /* Nueva animación */
+}
+
+.gift-section h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color); /* Resalta con el color principal */
+  margin-bottom: 20px;
+}
+
+.gift-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.gift-alias {
+  background: var(--background-light); /* Contraste con el fondo oscuro */
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* Para centrar */
+}
+
+
+/* Confirmation Section */
+.confirmation-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--background-light);
+  color: var(--text-color);
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: zoomIn 1.5s ease-in-out; /* Nueva animación */
+}
+
+.confirmation-section h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.confirmation-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.confirmation-link a {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+  background: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.confirmation-link a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes textFocusIn {
+  0% {
+      letter-spacing: 1em;
+      opacity: 0;
+  }
+  100% {
+      letter-spacing: normal;
+      opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+
+@keyframes slideFadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

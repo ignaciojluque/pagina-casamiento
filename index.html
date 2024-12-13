@@ -4,248 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giuli & Nacho - Nos Casamos</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;700&family=Great+Vibes&display=swap');
-
-        body {
-            font-family: 'Raleway', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(180deg, #fff8f0, #ffe4e1, #f9d8d6);
-            overflow-x: hidden;
-        }
-
-        header {
-            background: url('https://source.unsplash.com/1600x900/?wedding') center/cover no-repeat;
-            padding: 80px 20px;
-            text-align: center;
-            color: #fff;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 4.5rem;
-            font-family: 'Great Vibes', cursive;
-            animation: fadeInDown 1s ease;
-        }
-
-        header p {
-            font-size: 1.8rem;
-            margin-top: 10px;
-            animation: fadeInUp 1s ease;
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .section {
-            padding: 20px;
-            margin: 20px 0;
-            background: linear-gradient(135deg, #fff9f3, #f9f3e5);
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-        }
-
-        .section:hover {
-            transform: scale(1.02);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .info h2 {
-            color: #b85c50;
-            text-align: center;
-            font-family: 'Great Vibes', cursive;
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        .info p {
-            font-size: 1.2rem;
-            text-align: justify;
-            color: #555;
-            margin-top: 10px;
-        }
-
-        .quote {
-            font-size: 1.5rem;
-            font-style: italic;
-            text-align: center;
-            margin: 40px 0;
-            color: #6a3e36;
-            font-family: 'Playfair Display', serif;
-            background: linear-gradient(to right, #ffddd2, #fff1f1);
-            padding: 25px;
-            border-radius: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: background 0.5s ease;
-        }
-
-        .quote:hover {
-            background: linear-gradient(to left, #ffe4e1, #ffddd2);
-        }
-    </style>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="src/css/styles.css">
 </head>
-<body>
-    <header>
-        <h1>¡Nos Casamos!</h1>
-        <p>Sábado, 3 de mayo de 2025</p>
-    </header>
 
+<body>
+  <header class="header">
+    <section class="title-section">
+        <div class="decorative">
+            <h1 class="title">Giuli & Nacho</h1>
+            <p class="subtitle">3 de mayo de 2025</p>
+        </div>
+        <div class="quote">
+          "El amor se mide por lo que está dispuesto a dar, sin esperar nada a cambio." - San Juan Pablo II
+      </div>
+    </section>
+  
+    <div class="flecha-continuar">⬇</div>
+  </header>
     <div class="container">
         <section class="section">
             <div class="info">
                 <h2>Nuestra Historia</h2>
-                <p>Todo comenzó con una casualidad que rápidamente se convirtió en destino. Desde la primera conversación, supimos que algo especial estaba ocurriendo. Entre risas, aventuras y sueños compartidos, nuestro amor fue creciendo, llevándonos a este momento tan especial.</p>
+                <p>Todo comenzó con una casualidad...</p>
             </div>
         </section>
 
-        <div class="quote">
-            "El amor se mide por lo que está dispuesto a dar, sin esperar nada a cambio." - San Juan Pablo II
+        <section class="info-section">
+          <h2>Información del Evento</h2>
+          <div class="info-item">
+              <h3>Ceremonia</h3>
+              <img src="assets/images/san_vicente.png" alt="Basílica San Vicente Ferrer">
+              <p>Basílica San Vicente Ferrer<br>Lavalle 60, Godoy Cruz, Mendoza<br>12:00 hs</p>
+              <p>
+                  <a href="https://maps.app.goo.gl/NtXjDQQvDsn3Ngyp7" target="_blank">📍 Ver en Google Maps</a>
+              </p>
+          </div>
+          <div class="info-item">
+              <h3>Fiesta</h3>
+              <img src="assets/images/la_guadalupe_1.png" alt="Salón La Guadalupe">
+              <p>Salón La Guadalupe<br>La Florida, M5517 Lunlunta, Mendoza</p>
+              <p>
+                  <a href="https://maps.app.goo.gl/STQoprmMwtHApt29A" target="_blank">📍 Ver en Google Maps</a>
+              </p>
+          </div>
+      </section>
+      
+      <section class="confirmation-section">
+        <h2>Confirma tu Asistencia</h2>
+        <p>Tu presencia es muy importante para nosotros. Por favor, confirma tu asistencia completando el siguiente formulario:</p>
+        <div class="confirmation-link">
+            <a href="https://docs.google.com/forms/d/1Dz9ELrBTlzl9wQ-gP53UvuhXa7O-68KIPyN8ZsBKnTo/edit" target="_blank">
+                📝 Confirmar Asistencia
+            </a>
         </div>
-        <section class="section">
-          <div class="info" style="text-align: center;">
-              <h2 style="font-size: 2.8rem; margin-bottom: 20px; font-family: 'Great Vibes', cursive; color: #d97350;">Información del Evento</h2>
-              <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;">
-                  <!-- Columna Ceremonia -->
-                  <div style="flex: 1; min-width: 300px; max-width: 380px; margin: 0;">
-                      <div style="background: linear-gradient(135deg, #fff9f3, #f9e4d6); border-radius: 25px; padding: 25px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);">
-                          <h3 style="font-size: 1.8rem; margin-bottom: 10px; color: #d97350;">Ceremonia</h3>
-                          <div style="overflow: hidden; border-radius: 15px;">
-                              <img src="san_vicente.png" alt="Iglesia San Vicente Ferrer" style="width: 100%; height: auto; transition: transform 0.3s ease;">
-                          </div>
-                          <p style="margin: 15px 0; line-height: 1.6; font-size: 1rem; color: #555;">Iglesia San Vicente Ferrer<br>Lavalle 60, Godoy Cruz, Mendoza<br>12:00 hs</p>
-                          <p style="margin-top: 10px;">
-                              <a href="https://maps.app.goo.gl/NtXjDQQvDsn3Ngyp7" target="_blank" style="text-decoration: none; color: #d97350; font-weight: bold; font-size: 1rem;">📍 Ver en Google Maps</a>
-                          </p>
-                      </div>
-                  </div>
-                  <!-- Columna Fiesta -->
-                  <div style="flex: 1; min-width: 300px; max-width: 380px; margin: 0;">
-                      <div style="background: linear-gradient(135deg, #fff9f3, #f9e4d6); border-radius: 25px; padding: 25px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);">
-                          <h3 style="font-size: 1.8rem; margin-bottom: 10px; color: #d97350;">Fiesta</h3>
-                          <div style="overflow: hidden; border-radius: 15px;">
-                              <img src="la_guadalupe_1.png" alt="Salón La Guadalupe" style="width: 100%; height: auto; transition: transform 0.3s ease;">
-                          </div>
-                          <p style="margin: 15px 0; line-height: 1.6; font-size: 1rem; color: #555;">Salón La Guadalupe<br>La Florida, M5517 Lunlunta, Mendoza</p>
-                          <p style="margin-top: 10px;">
-                              <a href="https://maps.app.goo.gl/STQoprmMwtHApt29A" target="_blank" style="text-decoration: none; color: #d97350; font-weight: bold; font-size: 1rem;">📍 Ver en Google Maps</a>
-                          </p>
-                      </div>
-                  </div>
+    </section>
+    
+
+        <section class="gift-section">
+          <h2>Un Regalo Especial</h2>
+          <p>Si quieren ayudarnos con nuestra luna de miel, pueden hacerlo a través del siguiente alias:</p>
+          <div class="gift-alias">
+              <p><strong>Alias:</strong> regalo.giuli.nacho</p>
+          </div>
+      </section>
+
+        <section class="gallery-section">
+          <h2>Galería de Fotos</h2>
+          <div class="gallery-container">
+              <div class="gallery-item">
+                  <img src="assets/images/nosotros1.jpeg" alt="Foto 1" onclick="openModal(0)">
               </div>
-          </div>
-      </section>
-      
-      
-      
-
-      <section class="section">
-          <div class="info">
-              <h2>Un Regalo Especial</h2>
-              <p>Si quieren ayudarnos con nuestra luna de miel, pueden hacerlo a través del alias:</p>
-              <p><strong>alias: regalo.giuli.nacho</strong></p>
-          </div>
-      </section>
-
-      <section class="section confirm-section">
-          <h2>Confirma tu Asistencia</h2>
-          <p>Tu presencia es muy importante para nosotros. Por favor confirma tu asistencia completando el formulario:</p>
-          <a href="https://docs.google.com/forms/d/1Dz9ELrBTlzl9wQ-gP53UvuhXa7O-68KIPyN8ZsBKnTo/edit" target="_blank">📝 Confirmar Asistencia</a>
-      </section>
-
-      <section class="section">
-        <div class="info">
-            <h2>Galería de Fotos</h2>
-            <p>Explora nuestros momentos especiales. Haz clic en cualquier imagen para verla en grande.</p>
-        </div>
-        <div class="gallery-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;">
-            <div class="gallery" style="display: flex; overflow: hidden; white-space: nowrap; border-radius: 10px;">
-                <div style="flex: 1 1 calc(25% - 10px); max-width: calc(25% - 10px);">
-                    <img src="IMG_4204.jpeg" alt="Foto 1" onclick="openModal(0)" style="width: 100%; border-radius: 10px; cursor: pointer;">
-                </div>>
-                <div style="flex: 1 1 calc(25% - 10px); max-width: calc(25% - 10px);">
-                    <img src="IMG_3884.jpeg" alt="Foto 2" onclick="openModal(1)" style="width: 100%; border-radius: 10px; cursor: pointer;">
-                </div>
-                <div style="flex: 1 1 calc(25% - 10px); max-width: calc(25% - 10px);">
-                    <img src="IMG_2991.jpeg" alt="Foto 3" onclick="openModal(2)" style="width: 100%; border-radius: 10px; cursor: pointer;">
-                </div>
-                <div style="flex: 1 1 calc(25% - 10px); max-width: calc(25% - 10px);">
-                    <img src="ecfff670-1bda-4267-8c00-6b7a90a4e84c.jpeg" alt="Foto 4" onclick="openModal(3)" style="width: 100%; border-radius: 10px; cursor: pointer;">
-                </div>
+              <div class="gallery-item">
+                  <img src="assets/images/nosotros2.jpeg" alt="Foto 2" onclick="openModal(1)">
+              </div>
+              <div class="gallery-item">
+                  <img src="assets/images/giuli_anillo.jpeg" alt="Foto 3" onclick="openModal(2)">
+              </div>
+              <div class="gallery-item">
+                  <img src="assets/images/nosotros3.jpeg" alt="Foto 4" onclick="openModal(3)">
+              </div>
+              <div class="gallery-item">
+                <img src="assets/images/nosotros1.jpeg" alt="Foto 1" onclick="openModal(0)">
             </div>
+            <div class="gallery-item">
+                <img src="assets/images/nosotros2.jpeg" alt="Foto 2" onclick="openModal(1)">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/giuli_anillo.jpeg" alt="Foto 3" onclick="openModal(2)">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/images/nosotros3.jpeg" alt="Foto 4" onclick="openModal(3)">
+            </div>
+            <div class="gallery-item">
+              <img src="assets/images/nosotros3.jpeg" alt="Foto 4" onclick="openModal(3)">
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/nosotros1.jpeg" alt="Foto 1" onclick="openModal(0)">
         </div>
-    </section>
-    
-
-    
-
-
-    <div class="modal" id="photoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center;">
-        <span class="close" onclick="closeModal()" style="position: absolute; top: 20px; right: 20px; font-size: 2rem; color: #fff; cursor: pointer;">&times;</span>
-        <span class="arrow left" onclick="prevImage()" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); font-size: 2rem; color: #fff; cursor: pointer;">&#10094;</span>
-        <img id="modalImage" src="" alt="Imagen" style="max-width: 80%; max-height: 80%; border-radius: 10px;">
-        <span class="arrow right" onclick="nextImage()" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); font-size: 2rem; color: #fff; cursor: pointer;">&#10095;</span>
+        <div class="gallery-item">
+            <img src="assets/images/nosotros2.jpeg" alt="Foto 2" onclick="openModal(1)">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/giuli_anillo.jpeg" alt="Foto 3" onclick="openModal(2)">
+        </div>
+        <div class="gallery-item">
+            <img src="assets/images/nosotros3.jpeg" alt="Foto 4" onclick="openModal(3)">
+        </div>
+          </div>
+      
+          <!-- Modal -->
+          <div class="modal" id="photoModal">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <span class="arrow prev" onclick="prevImage()">&#10094;</span>
+              <img class="modal-content" id="modalImage" alt="Vista ampliada">
+              <span class="arrow next" onclick="nextImage()">&#10095;</span>
+          </div>
+      </section>
+      
+      
     </div>
-    
-    <script>
-        const gallery = document.querySelector('.gallery');
-        const images = document.querySelectorAll('.gallery img');
-        const modal = document.getElementById('photoModal');
-        const modalImage = document.getElementById('modalImage');
-        let currentIndex = 0;
-    
-        function openModal(index) {
-            currentIndex = index;
-            modal.style.display = 'flex';
-            modalImage.src = images[currentIndex].src;
-        }
-    
-        function closeModal() {
-            modal.style.display = 'none';
-        }
-    
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            modalImage.src = images[currentIndex].src;
-        }
-    
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            modalImage.src = images[currentIndex].src;
-        }
-    
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                closeModal();
-            }
-        };
-    </script>
-    
-    <section class="footer-section" style="background: linear-gradient(135deg, #f9f3e5, #f9d8d6); padding: 40px; text-align: center; border-top: 1px solid #ddd;">
-        <div class="info">
-            <h2 style="font-family: 'Great Vibes', cursive; font-size: 2rem; margin-bottom: 20px;">Gracias por acompañarnos</h2>
-            <p style="font-size: 1.2rem; color: #555;">Estamos emocionados de celebrar este día especial con ustedes. ¡Nos vemos pronto!</p>
-        </div>
-    </section>
-    </body>
-    </html>
+
+    <footer>
+        <p>Gracias por acompañarnos. ¡Nos vemos pronto!</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="src/js/scripts.js"></script>
+</body>
+</html>
