@@ -16,6 +16,22 @@ body {
 }
 
 
+.header {
+  font-family: 'Sarcolenta';
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 150vh; /* Ocupa toda la pantalla */
+  background: linear-gradient(to bottom, rgba(255, 198, 152, 0.9), rgba(245, 205, 215, 0.8)), 
+              url('../../assets/images/giuli_anillo.jpeg') center/cover no-repeat;
+  color: #5a4a42;
+  overflow: hidden;
+}
+
+
 .flecha-continuar {
   position: fixed;
   bottom: 20px;
@@ -180,19 +196,7 @@ body {
 }
 
 
-.header {
-  font-family: 'Sarcolenta';
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh; /* Ocupa toda la pantalla */
-  background: linear-gradient(to bottom, rgba(255, 198, 152, 0.9), rgba(245, 205, 215, 0.8)), 
-              url('../../assets/images/giuli_anillo.jpeg') center/cover no-repeat;
-  color: #5a4a42;
-  overflow: hidden;
-}
+
 
 .title-section {
   
@@ -377,11 +381,12 @@ body {
       transform: translateY(0);
   }
 }
-/* 
+
 @media (max-width: 768px) {
   body{
+      background: url('../../assets/images/savethedate-cel.png') center/cover no-repeat;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
   }
-} */
+}
