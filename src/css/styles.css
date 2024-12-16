@@ -7,9 +7,9 @@ body {
   font-family: 'Sarcolenta';
   margin: 0;
   padding: 0;
-  background: url('../../assets/images/savetedate.jpeg') center/cover no-repeat;
+  background: url('../../assets/images/savethedate.jpeg') center/cover no-repeat;
   background-attachment: fixed;
-
+  background-blend-mode: multiply;
   color: #333;
   min-height: 100vh;
   overflow-x: hidden;
@@ -379,9 +379,9 @@ body {
 }
 
 @media (max-width: 768px) {
-  body {
-      background: url('../../assets/images/savetedate.jpeg') center/cover no-repeat;
-      background-attachment: fixed; /* Solo en pantallas grandes */
-      position: relative; /* Para el pseudo-elemento si se usa */
+  body{
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
   }
 }
