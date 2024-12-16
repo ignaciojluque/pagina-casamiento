@@ -377,11 +377,11 @@ body {
       transform: translateY(0);
   }
 }
-
+/* 
 @media (max-width: 768px) {
   body{
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
   }
-}
+} */
