@@ -312,7 +312,7 @@ body {
 
 /* Variables de colores */
 :root {
-  --background-light: #f7f5f3; /* Blanco neutro */
+  --background-light: rgba(247, 245, 243, 0.8); /* Blanco neutro con transparencia */
   --primary-color: #b89f7d; /* Marrón suave */
   --secondary-color: #6b8f71; /* Verde suave */
   --accent-color: #8ab3c5; /* Azul claro */
@@ -323,7 +323,7 @@ body {
 .confirmation-section {
   text-align: center;
   padding: 50px 30px;
-  background: var(--background-light);
+  background: var(--background-light); /* Transparencia agregada */
   color: var(--text-color);
   border: 2px solid var(--primary-color);
   border-radius: 15px;
