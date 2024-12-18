@@ -386,7 +386,7 @@ body {
   body{
       background: url('../../assets/images/savethedate-cel.webp') center/cover no-repeat;
       background-position: center;
-      background-size: cover;
+      background-size: contain;
       background-repeat: no-repeat;
   }
 }
