@@ -271,43 +271,7 @@ body {
 }
 
 
-/* GIFT SECTION */
 
-.gift-section {
-  font-family: 'Sarcolenta';
-  text-align: center;
-  padding: 40px 20px;
-  background: var(--background-dark); /* Usa la variable de color de fondo oscuro */
-  color: var(--text-light);
-  border-radius: 15px;
-  margin: 20px auto;
-  max-width: 800px; /* Limita el ancho para un diseño más limpio */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: slideFadeIn 2s ease-in-out; /* Nueva animación */
-}
-
-.gift-section h2 {
-  font-family: 'Sarcolenta';
-  font-size: 2.5rem;
-  color: var(--primary-color); /* Resalta con el color principal */
-  margin-bottom: 20px;
-}
-
-.gift-section p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.gift-alias {
-  background: var(--background-light); /* Contraste con el fondo oscuro */
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: inline-block; /* Para centrar */
-}
 
 
 /* Variables de colores */
@@ -317,7 +281,51 @@ body {
   --secondary-color: #6b8f71; /* Verde suave */
   --accent-color: #8ab3c5; /* Azul claro */
   --text-color: #3c3c3c; /* Gris oscuro */
+  --font-family: 'Sarcolenta'
 }
+
+/* Sección de Regalo */
+.gift-section {
+  text-align: center;
+  padding: 50px 30px;
+  background: var(--background-light); /* Transparencia */
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 700px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1.5s ease-in-out; /* Animación de entrada */
+  backdrop-filter: blur(5px); /* Efecto de desenfoque del fondo */
+}
+
+.gift-section h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+}
+
+.gift-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+.gift-alias {
+  background: var(--secondary-color);
+  color: var(--background-light);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
 
 /* Sección de Confirmación */
 .confirmation-section {
@@ -337,7 +345,7 @@ body {
   font-size: 2.8rem;
   color: var(--primary-color);
   margin-bottom: 15px;
-  font-family: 'Georgia', serif;
+  font-family: var(--font-family);
 }
 
 .confirmation-section p {
