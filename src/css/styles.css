@@ -384,7 +384,7 @@ body {
 
 @media (max-width: 768px) {
   body{
-      background: url('../../assets/images/savethedate-cel.png') center/cover no-repeat;
+      background: url('../../assets/images/savethedate-cel.webp') center/cover no-repeat;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
