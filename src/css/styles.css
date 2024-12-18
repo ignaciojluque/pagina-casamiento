@@ -386,6 +386,6 @@ body {
   body{
       background: url('../../assets/images/savethedate.jpeg') center/contain no-repeat;
       background-size: cover;
-    
+      background-attachment: fixed;
   }
 }
