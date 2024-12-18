@@ -385,7 +385,7 @@ body {
 @media (max-width: 768px) {
   body{
       background: url('../../assets/images/savethedate.jpeg') center/contain no-repeat;
-      background-size: contain;
+      background-size: cover;
     
   }
 }
