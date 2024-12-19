@@ -32,7 +32,42 @@ body {
   overflow-x: hidden;
 }
 
+header {
+  position: relative;
+  width: 100vw; /* Ancho completo de la pantalla */
+  height: 100vh; /* Alto completo de la pantalla */
+  color: var(--text-color);
+  background: var(--light-gradient), url('../../assets/images/giuli_anillo.jpeg') center/cover no-repeat; 
+  animation: fadeIn 2s ease-in-out; /* Animación de entrada */
+  /*backdrop-filter: blur(3px); /* Desenfoque ligero */
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
 @media (max-width: 768px) {
+
+  header {
+    margin: 0;
+    position: relative;
+    width: 100vw; /* Ancho completo de la pantalla */
+    height: 100vh; /* Alto completo de la pantalla */
+  }
+
+  header::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--light-gradient), url('../../assets/images/giuli_anillo.jpeg') center/cover no-repeat; 
+    background-blend-mode: multiply;
+    z-index: -1; /* Lo colocamos detrás del contenido del header */
+  }
+
+
   body {
     margin: 0;
     padding: 0;
@@ -59,17 +94,7 @@ body {
 .title-section {
   text-align: center;
   /* padding: 100px 20px; */
-  background: var(--light-gradient), url('../../assets/images/giuli_anillo.jpeg') center/cover no-repeat; /* Fondo degradado con imagen */
-  color: var(--text-color);
-  animation: fadeIn 2s ease-in-out; /* Animación de entrada */
-  /*backdrop-filter: blur(3px); /* Desenfoque ligero */
-  height: 190vh;
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  
 }
 
 .title {
