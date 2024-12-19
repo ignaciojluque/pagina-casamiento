@@ -3,17 +3,22 @@
   src: url('../fonts/Sarcolenta.ttf') format('truetype');
 }
 
-/* body {
-  font-family: 'Sarcolenta';
-  margin: 0;
-  padding: 0;
-  background: url('../../assets/images/savethedate.jpeg') center/cover no-repeat;
-  background-attachment: fixed;
-  background-blend-mode: multiply;
-  color: #333;
-  min-height: 100vh;
-  overflow-x: hidden;
-} */
+
+/* Variables de ROOT */
+
+
+:root {
+  --background-light: rgba(247, 245, 243, 0.8); /* Fondo neutro con transparencia */
+  --primary-color: #b89f7d; /* Marrón suave */
+  --secondary-color: #6b8f71; /* Verde suave */
+  --accent-color: #8ab3c5; /* Azul claro */
+  --highlight-color: #d97350; /* Naranja cálido */
+  --text-color: #3c3c3c; /* Gris oscuro */
+  --dark-brown: #5a4a42; /* Marrón oscuro */
+  --light-gradient: linear-gradient(to bottom, rgba(255, 198, 152, 0.9), rgba(245, 205, 215, 0.8));
+  --font-family: 'Sarcolenta'
+}
+
 
 body {
   font-family: 'Sarcolenta';
@@ -50,41 +55,92 @@ body {
 }
 
 
-
-.header {
-  font-family: 'Sarcolenta';
-  background-size: contain;
+/* Header */
+.title-section {
+  text-align: center;
+  /* padding: 100px 20px; */
+  background: var(--light-gradient), url('../../assets/images/giuli_anillo.jpeg') center/cover no-repeat; /* Fondo degradado con imagen */
+  color: var(--text-color);
+  animation: fadeIn 2s ease-in-out; /* Animación de entrada */
+  /*backdrop-filter: blur(3px); /* Desenfoque ligero */
+  height: 190vh;
+  text-align: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  height: 150vh; /* Ocupa toda la pantalla */
-  background: linear-gradient(to bottom, rgba(255, 198, 152, 0.9), rgba(245, 205, 215, 0.8)), 
-              url('../../assets/images/giuli_anillo.jpeg') center/cover no-repeat;
-  color: #5a4a42;
-  overflow: hidden;
 }
 
+.title {
+  font-size: 4rem;
+  font-family: 'Sarcolenta';
+  color: var(--highlight-color); /* Naranja cálido */
+  margin: 0;
+  /*text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);*/
+  animation: textFocusIn 1.5s ease-in-out;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-family: 'Sarcolenta', serif;
+  color: var(--dark-brown); /* Marrón oscuro */
+  margin-top: 10px;
+  /*text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);*/
+  animation: textFocusIn 1.5s ease-in-out;
+}
 
 .flecha-continuar {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 2.5rem;
+  color: var(--highlight-color); /* Naranja cálido */
+  margin-top: 20px;
   animation: bounce 1.5s infinite;
-  color: #d97350;
+  cursor: pointer;
+}
+
+.quote {
+  margin-top: 20px;
+  font-family: 'Sarcolenta', serif; /* Cambio para darle más elegancia */
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--text-color); 
+  animation: fadeInUp 4s ease-in-out;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Animaciones */
+@keyframes textFocusIn {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
 }
 
 @keyframes bounce {
   0%, 100% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
   50% {
-      transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 .section {
   padding: 20px;
@@ -94,27 +150,219 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+
+/* Información del Evento */
+
+
+/* Sección "Nuestra Historia" */
+.nuestra-historia-section {
+  padding: 40px 20px;
+  background: var(--light-gradient);
+  border-radius: 15px;
+  color: var(--text-color);
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: justify;
+}
+
+.nuestra-historia-section h2 {
+  font-family: 'Sarcolenta';
+  font-size: 2.8rem;
+  text-align: center;
+  color: var(--highlight-color);
+  margin-bottom: 20px;
+}
+
+.nuestra-historia-section h3 {
+  font-family: 'Sarcolenta';
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.nuestra-historia-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--dark-brown);
+}
+
+.nuestra-historia-section img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Enlaces */
+.nuestra-historia-section a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nuestra-historia-section a:hover {
+  text-decoration: underline;
+}
+
+/* Sección "Participantes de nuestra historia" */
+.participants-section {
+  padding: 50px 20px;
+  background: var(--background-light);
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 1000px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.participants-section h2 {
+  font-family: 'Sarcolenta', serif;
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.participants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.participants-item img {
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.participants-item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.participants-item p {
+  font-family: 'Sarcolenta', serif;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  position: relative;
+  text-align: center;
+  max-width: 80%;
+  color: white;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 70vh;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-description {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-close {
+  top: 20px;
+  right: 20px;
+}
+
+.lightbox-prev {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-active {
+  display: flex;
+}
+
+
+
 .info-section {
   text-align: center;
   padding: 40px 20px;
-  color: #fff; /* Texto claro para que resalte sobre el fondo */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Sombra para mejorar legibilidad */
+  color: rgb(0, 0, 0); 
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 1.5); /*Sombra para mejorar legibilidad */
 }
 
+
 .info-section h2 {
-  font-size: 2.5rem;
+  font-family: 'Sarcolenta'; /* Fuente Sarcolenta */
+  font-size: 3.2rem;
+  color: var(--primary-color); /* Marrón suave */
+  text-align: center;
   margin-bottom: 20px;
+}
+
+.info-item h3 {
+  font-family: 'Sarcolenta'; /* Fuente Sarcolenta */
+  font-size: 2.5rem;
+  color: var(--highlight-color); /* Naranja cálido */
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .info-item {
   margin-bottom: 40px;
 }
 
-.info-item h3 {
-  font-family: 'Sarcolenta';
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
 
 .info-item img {
   width: 100%;
@@ -127,12 +375,14 @@ body {
   font-family: 'Sarcolenta';
   font-size: 1.2rem;
   margin-bottom: 10px;
+  text-shadow: none
 }
 
 .info-item a {
   color: hsl(39, 96%, 67%); /* Color de enlace que contraste con el fondo */
   text-decoration: none;
   font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
 .info-item a:hover {
@@ -233,12 +483,12 @@ body {
 
 
 
-.title-section {
+/* .title-section {
   
-  animation: fadeIn 2s ease-in-out; /* Animación de entrada */
+  animation: fadeIn 2s ease-in-out; /* Animación de entrada 
 }
 
-.title {
+ .title {
   font-size: 4rem;
   font-family: 'Sarcolenta';
   color: #d97350;
@@ -267,22 +517,13 @@ body {
   font-family: 'Sarcolenta';
   font-size: 1.5rem;
   color:  #d97350;
-  animation: fadeInUp  4s ease-in-out; /* Efecto sutil de subida */
-}
+  animation: fadeInUp  4s ease-in-out; /* Efecto sutil de subida 
+} */
 
 
 
 
 
-/* Variables de colores */
-:root {
-  --background-light: rgba(247, 245, 243, 0.8); /* Blanco neutro con transparencia */
-  --primary-color: #b89f7d; /* Marrón suave */
-  --secondary-color: #6b8f71; /* Verde suave */
-  --accent-color: #8ab3c5; /* Azul claro */
-  --text-color: #3c3c3c; /* Gris oscuro */
-  --font-family: 'Sarcolenta'
-}
 
 /* Sección de Regalo */
 .gift-section {
@@ -303,7 +544,7 @@ body {
   font-size: 2.8rem;
   color: var(--primary-color);
   margin-bottom: 15px;
-  font-family: 'Georgia', serif;
+  font-family: var(--font-family);
 }
 
 .gift-section p {
@@ -339,7 +580,10 @@ body {
   max-width: 700px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   animation: fadeInConfirmation 1.5s ease-in-out;
+  backdrop-filter: blur(5px); /* Efecto de desenfoque del fondo */
 }
+
+
 
 .confirmation-section h2 {
   font-size: 2.8rem;
