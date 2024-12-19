@@ -15,7 +15,7 @@
   --highlight-color: #d97350; /* Naranja cálido */
   --text-color: #3c3c3c; /* Gris oscuro */
   --dark-brown: #5a4a42; /* Marrón oscuro */
-  --light-gradient: linear-gradient(to bottom, rgba(255, 198, 152, 0.9), rgba(245, 205, 215, 0.8));
+  --light-gradient: linear-gradient(to bottom, rgba(255, 198, 152, 0.6), rgba(245, 205, 215, 0.8));
   --font-family: 'Sarcolenta'
 }
 
@@ -37,7 +37,7 @@ header {
   width: 100vw; /* Ancho completo de la pantalla */
   height: 175vh; /* Alto completo de la pantalla */
   color: var(--text-color);
-  background: var(--light-gradient), url('../../assets/images/giuli_anillo.jpeg') no-repeat; 
+  background: var(--light-gradient), url('../../assets/images/foto_inicial.png') no-repeat; 
   background-position: center 55%;
   background-size: cover;
   animation: fadeIn 1s ease-in-out; /* Animación de entrada */
@@ -55,6 +55,7 @@ header {
   header {
     margin: 0;
     height: 100vh; 
+    width: 100vw; 
     padding: 50px 0; /* Espaciado adicional */
   }
 
@@ -64,14 +65,11 @@ header {
     position: absolute; /* Cambiado a absolute para moverse con el contenido */
     top: 0;
     left: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Ocupa toda la altura del header */
-    background: var(--light-gradient), url('../../assets/images/giuli_anillo.jpeg') no-repeat; 
-    background-position: center top; /* Mueve el foco de la imagen hacia arriba */
-    background-size: contain; /* Ajusta la imagen al ancho del contenedor */
+    width: 100vw; /* Ancho completo */
+    height: 100vh; /* Ocupa toda la altura del header */
+    background-size: cover; /* Ajusta la imagen al ancho del contenedor */
     background-blend-mode: multiply;
     z-index: -1; /* Detrás del contenido del header */
-   
   }
 
 
