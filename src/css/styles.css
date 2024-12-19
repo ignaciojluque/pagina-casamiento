@@ -37,17 +37,19 @@ header {
   width: 100vw; /* Ancho completo de la pantalla */
   height: 100vh; /* Alto completo de la pantalla */
   color: var(--text-color);
-  background: var(--light-gradient), url('../../assets/images/giuli_anillo.jpeg') center/cover no-repeat; 
+  background: var(--light-gradient), url('../../assets/images/giuli_anillo.jpeg') no-repeat; 
+  background-position: center 100%;
+  background-size: cover;
   animation: fadeIn 2s ease-in-out; /* Animación de entrada */
   /*backdrop-filter: blur(3px); /* Desenfoque ligero */
   text-align: center;
+  align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+  
 }
+
 @media (max-width: 768px) {
 
   header {
