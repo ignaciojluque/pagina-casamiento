@@ -282,8 +282,6 @@ header {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .participants-item p {
   font-family: 'Sarcolenta', serif;
   margin-top: 10px;
@@ -372,7 +370,7 @@ header {
   text-align: center;
   padding: 40px 20px;
   color: rgb(0, 0, 0); 
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /*Sombra para mejorar legibilidad */
+  
 }
 
 
@@ -514,50 +512,6 @@ header {
 }
 
 
-
-
-/* .title-section {
-  
-  animation: fadeIn 2s ease-in-out; /* Animación de entrada 
-}
-
- .title {
-  font-size: 4rem;
-  font-family: 'Sarcolenta';
-  color: #d97350;
-  margin: 0;
-  animation: textFocusIn 1.5s ease-in-out;
-}
-
-.subtitle {
-  font-size: 1.8rem;
-  font-family: 'Sarcolenta';
-  color: #5a4a42;
-  margin-top: 10px;
-  animation: textFocusIn 1.5s ease-in-out;
-}
-
-.flecha-continuar {
-  font-size: 2.5rem;
-  color: #d97350;
-  margin-top: 20px;
-  animation: bounce 1.5s infinite;
-  cursor: pointer;
-}
-
-.quote {
-  margin-top: 20px;
-  font-family: 'Sarcolenta';
-  font-size: 1.5rem;
-  color:  #d97350;
-  animation: fadeInUp  4s ease-in-out; /* Efecto sutil de subida 
-} */
-
-
-
-
-
-
 /* Sección de Regalo */
 .gift-section {
   text-align: center;
@@ -583,7 +537,7 @@ header {
 .gift-section p {
   font-size: 1.2rem;
   margin-bottom: 20px;
-  line-height: 1.8;
+  line-height: 1.2;
   color: var(--text-color);
 }
 
@@ -628,7 +582,7 @@ header {
 .confirmation-section p {
   font-size: 1.2rem;
   margin-bottom: 25px;
-  line-height: 1.8;
+  line-height: 1.2;
   color: var(--text-color);
 }
 
@@ -677,7 +631,7 @@ footer h2 {
 
 footer p {
   font-size: 1.5rem; /* Texto más grande */
-  line-height: 1.8;
+  line-height: 1;
   letter-spacing: 0.5px;
   margin: 10px 0;
 }
