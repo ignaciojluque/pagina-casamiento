@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-
+  
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("intentionForm");
     const intentionInput = document.getElementById("intentionInput");
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       if (intention) {
         try {
-          const response = await fetch("https://script.google.com/macros/s/AKfycbyIVZXNrQtE7XXeYpnMabK316PIrHD18b3qn-HBCnW0R0iN3iqBIktfzR4-SHasBRl3Kg/exec", { // Reemplaza con el URL de la aplicación web
+          const response = await fetch("https://script.google.com/macros/s/AKfycbySetqV8TJ9mpRv2NRxEIwn6Gc8GdT5RUI2OZVLSkXPu_s2c7jZH1q3g4HVHw6ugtfFOQ/exec", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -167,6 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Hubo un error al enviar tu intención. Intenta nuevamente.");
           }
         } catch (error) {
+          console.error("Error:", error);
           alert("Hubo un error al conectarse con el servidor.");
         }
       }
