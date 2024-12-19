@@ -365,7 +365,7 @@ header {
   text-align: center;
   padding: 40px 20px;
   color: rgb(0, 0, 0); 
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 1.5); /*Sombra para mejorar legibilidad */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /*Sombra para mejorar legibilidad */
 }
 
 
@@ -408,7 +408,7 @@ header {
   color: hsl(39, 96%, 67%); /* Color de enlace que contraste con el fondo */
   text-decoration: none;
   font-weight: bold;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .info-item a:hover {
