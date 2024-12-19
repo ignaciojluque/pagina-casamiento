@@ -651,6 +651,38 @@ header {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+
+/* Footer */
+footer {
+  background: var(--light-gradient); /* Fondo degradado cálido */
+  color: var(--text-color); /* Texto en gris oscuro */
+  text-align: center;
+  padding: 50px 20px; /* Espaciado interno mayor */
+  font-family: 'Sarcolenta', serif; /* Fuente elegante */
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.1); /* Sombra sutil hacia arriba */
+  border-top: 3px solid var(--highlight-color); /* Línea superior más significativa */
+}
+
+.footer-content {
+  max-width: 800px; /* Limita el ancho máximo del texto */
+  margin: 0 auto; /* Centra el contenido */
+  animation: fadeIn 2s ease-in-out; /* Animación de entrada */
+}
+
+footer h2 {
+  font-size: 2.5rem; /* Tamaño grande para el título */
+  color: var(--highlight-color); /* Naranja cálido para destacar */
+  margin-bottom: 20px;
+}
+
+footer p {
+  font-size: 1.5rem; /* Texto más grande */
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  margin: 10px 0;
+}
+
+
 /* Animación */
 @keyframes fadeInConfirmation {
   from {
