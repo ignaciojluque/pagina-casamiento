@@ -552,7 +552,57 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/*Intenciones*/
 
+.intentions-section {
+  background: var(--background-light);
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intentions-section h2 {
+  font-family: 'Sarcolenta', serif;
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.intentions-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.intentions-section textarea {
+  width: 90%;
+  max-width: 700px;
+  height: 100px;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.intentions-section button {
+  background: var(--highlight-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intentions-section button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
 
 
 /* Sección de Confirmación */

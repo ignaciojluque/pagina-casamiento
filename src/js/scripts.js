@@ -134,3 +134,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("intentionForm");
+    const intentionInput = document.getElementById("intentionInput");
+    const confirmationMessage = document.getElementById("confirmationMessage");
+  
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+  
+      const intention = intentionInput.value.trim();
+  
+      if (intention) {
+        try {
+          const response = await fetch("https://script.google.com/macros/s/AKfycbyIVZXNrQtE7XXeYpnMabK316PIrHD18b3qn-HBCnW0R0iN3iqBIktfzR4-SHasBRl3Kg/exec", { // Reemplaza con el URL de la aplicación web
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ intention }),
+          });
+  
+          const result = await response.json();
+  
+          if (result.success) {
+            confirmationMessage.style.display = "block";
+            intentionInput.value = ""; // Limpia el campo de texto
+            setTimeout(() => {
+              confirmationMessage.style.display = "none";
+            }, 3000);
+          } else {
+            alert("Hubo un error al enviar tu intención. Intenta nuevamente.");
+          }
+        } catch (error) {
+          alert("Hubo un error al conectarse con el servidor.");
+        }
+      }
+    });
+  });
+  
