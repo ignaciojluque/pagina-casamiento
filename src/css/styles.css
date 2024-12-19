@@ -124,16 +124,16 @@ header {
 }
 
 .quote {
-  margin-top: 20px;
-  font-family: 'Sarcolenta', serif; /* Cambio para darle más elegancia */
+  margin: 20px auto; /* Asegura que esté centrado horizontalmente */
+  font-family: 'Sarcolenta', serif; /* Fuente elegante */
   font-size: 1.5rem;
-  width: 80vw;
+  width: 80%; /* Usar % en lugar de vw para mayor responsividad */
+  max-width: 500px; /* Limitar el ancho máximo */
   font-style: italic;
-  color: var(--text-color); 
+  color: var(--text-color);
   animation: fadeInUp 4s ease-in-out;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  justify-content: center;
+  text-align: center; /* Centra el texto dentro del bloque */
 }
 
 /* Animaciones */
