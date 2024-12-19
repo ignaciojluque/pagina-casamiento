@@ -127,6 +127,7 @@ header {
   margin-top: 20px;
   font-family: 'Sarcolenta', serif; /* Cambio para darle más elegancia */
   font-size: 1.5rem;
+  width: 80vw;
   font-style: italic;
   color: var(--text-color); 
   animation: fadeInUp 4s ease-in-out;
