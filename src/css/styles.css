@@ -719,6 +719,21 @@ footer p {
   margin: 10px 0;
 }
 
+.calendar-link {
+  font-size: 1.2rem;
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.calendar-link:hover {
+  background-color: #4CAF50;
+  color: white;
+}
 
 /* Animación */
 @keyframes fadeInConfirmation {
