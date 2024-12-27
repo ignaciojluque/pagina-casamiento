@@ -134,7 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-  
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("intentionForm");
     const intentionInput = document.getElementById("intentionInput");
@@ -145,32 +144,58 @@ document.addEventListener("DOMContentLoaded", () => {
   
       const intention = intentionInput.value.trim();
   
-      if (intention) {
-        try {
-          const response = await fetch("https://script.google.com/macros/s/AKfycbySetqV8TJ9mpRv2NRxEIwn6Gc8GdT5RUI2OZVLSkXPu_s2c7jZH1q3g4HVHw6ugtfFOQ/exec", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ intention }),
-          });
-  
-          const result = await response.json();
-  
-          if (result.success) {
-            confirmationMessage.style.display = "block";
-            intentionInput.value = ""; // Limpia el campo de texto
-            setTimeout(() => {
-              confirmationMessage.style.display = "none";
-            }, 3000);
-          } else {
-            alert("Hubo un error al enviar tu intención. Intenta nuevamente.");
-          }
-        } catch (error) {
-          console.error("Error:", error);
-          alert("Hubo un error al conectarse con el servidor.");
-        }
+      if (!intention) {
+        alert("Por favor, escribe una intención.");
+        return;
       }
+  
+      try {
+        console.log("Intentando enviar intención:", intention);
+      
+        const response = await fetch("https://gxuknip9i1.execute-api.us-east-2.amazonaws.com/proxyapp/proxy", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ intention }), // Enviar intención como objeto JSON
+        });
+      
+        console.log("Respuesta obtenida:", response);
+      
+        if (!response.ok) {
+          console.error(`La respuesta no fue exitosa. Status: ${response.status}`);
+          console.error(`Headers de la respuesta:`, Array.from(response.headers.entries()));
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+      
+        let result;
+        try {
+          result = await response.json(); // Procesa la respuesta como JSON
+          console.log("Resultado JSON recibido:", result);
+        } catch (jsonError) {
+          console.error("Error al procesar la respuesta como JSON:", jsonError);
+          throw new Error("La respuesta no es JSON válido.");
+        }
+      
+        if (response.ok) {
+          console.log("Respuesta exitosa, mostrando mensaje de confirmación.");
+          confirmationMessage.style.display = "block";
+          intentionInput.value = ""; // Limpiar el campo
+          setTimeout(() => {
+            confirmationMessage.style.display = "none";
+          }, 3000);
+        } else {
+          console.error("Error en el servidor:", result.error || "Respuesta desconocida");
+          alert("Error en el servidor: " + (result.error || "Respuesta desconocida"));
+        }
+      } catch (error) {
+        console.error("Error capturado en el bloque catch:");
+        console.error("Detalles del error:", error.message || error);
+        console.error("Stack del error:", error.stack || "No disponible");
+        alert("Hubo un problema al conectar con el servidor. Detalles: " + (error.message || "Error desconocido"));
+      
+      }
+      
     });
   });
   

@@ -15,7 +15,7 @@
   --highlight-color: #d97350; /* Naranja cálido */
   --text-color: #3c3c3c; /* Gris oscuro */
   --dark-brown: #5a4a42; /* Marrón oscuro */
-  --light-gradient: linear-gradient(to bottom, rgba(255, 198, 152, 0.6), rgba(245, 205, 215, 0.8));
+  --light-gradient: linear-gradient(rgba(255, 198, 152, 0.7), rgba(255, 198, 152, 0.3));
   --font-family: 'Sarcolenta'
 }
 
@@ -191,7 +191,7 @@ header {
 /* Sección "Nuestra Historia" */
 .nuestra-historia-section {
   padding: 40px 20px;
-  background: var(--light-gradient);
+  background: rgba(255, 198, 152, 0.8);
   border-radius: 15px;
   color: var(--text-color);
   margin: 20px auto;
@@ -658,7 +658,7 @@ header {
 
 /* Footer */
 footer {
-  background: var(--light-gradient); /* Fondo degradado cálido */
+  background: rgba(255, 198, 152, 0.8); /* Fondo degradado cálido */
   color: var(--text-color); /* Texto en gris oscuro */
   text-align: center;
   padding: 50px 20px; /* Espaciado interno mayor */
