@@ -16,7 +16,7 @@
             <p class="subtitle">3 de mayo de 2025</p>
         </div>
         <div class="quote">
-          "No me caso porque te amo, sino, para amarte"
+          "No me caso solo porque te amo, sino, para amarte"
       </div>
     </section>
   
@@ -94,11 +94,11 @@
         </div>
     </section>
     <section class="participants-section">
-        <h2>Participantes de Nuestra Historia</h2>
+        <h2>Participantes de Nuestra Historia + evidencias</h2>
         <div class="participants-grid">
           <div class="participants-item">
-            <img src="assets/images/coni.jpeg" alt="Las Celestinas: Coni y Colo" data-description="Las Celestinas: Coni y Colo">
-            <p>Ayudante de Cupido 1: Coni</p>
+            <img src="assets/images/juampiconi.png" alt="Las Celestinas: Coni y Colo" data-description="Las Celestinas: Coni y Colo">
+            <p>Ayudante de Cupido 1: Coni y Juampi</p>
           </div>
           <div class="participants-item">
             <img src="assets/images/colo.png" alt="Las Celestinas: Coni y Colo" data-description="Las Celestinas: Coni y Colo">
@@ -117,9 +117,18 @@
             <p>Nacho</p>
           </div>
           <div class="participants-item">
-            <img src="assets/images/juntada_despedida_beluyfede.jpeg" alt="Foto de la despedida de Belu y Fede el 01/02/24" data-description="Foto de la despedida de Belu y Fede el 01/02/24">
-            <p>Foto de la despedida de Belu y Fede el 01/02/24</p>
+            <img src="assets/images/evidencia1.png" alt="Foto de la despedida de Belu y Fede el 01/02/24" data-description="Foto de la despedida de Belu y Fede el 01/02/24">
+            <p>EVIDENCIA 1: pedido de Coni en el grupo </p>
           </div>
+          <div class="participants-item">
+            <img src="assets/images/evidencia2.png" alt="Foto de la despedida de Belu y Fede el 01/02/24" data-description="Foto de la despedida de Belu y Fede el 01/02/24">
+            <p>EVIDENCIA 2: Primer hola</p>
+          </div>
+          <div class="participants-item">
+            <img src="assets/images/juntada_despedida_beluyfede.jpeg" alt="Foto de la despedida de Belu y Fede el 01/02/24" data-description="Foto de la despedida de Belu y Fede el 01/02/24">
+            <p>EVIDENCIA 3: Foto de la despedida de Belu y Fede el 01/02/24</p>
+          </div>
+
         </div>
       
         <!-- Lightbox -->
@@ -152,14 +161,21 @@
       </section>
 
       <section class="intentions-section">
-        <h2>Enviar tu Intención</h2>
-        <p>Comparte tus intenciones para que podamos rezar por ellas. Llena el campo a continuación:</p>
+        <h2>Enviar una intención</h2>
+        <p>Pensamos que es un momento muy lindo para agradecer todas las cosas buenas y pedir por las intenciones guardadas en el corazón de cada uno de ustedes.</p>
+        <p>Asique todo lo que se escriba acá va a una listita (anónima) que pondremos en las intenciones de la misa y festejaremos correspondientemete en la fiesta :)</p>
         <form id="intentionForm">
           <textarea id="intentionInput" placeholder="Escribe tu intención aquí..." required></textarea>
-          <button type="submit">Enviar</button>
+          <div class="button-container">
+            <button type="submit" id="submitButton">Enviar</button>
+            <div id="loadingSpinner" style="display: none;">
+              <div class="spinner"></div>
+            </div>
+          </div>
         </form>
         <p id="confirmationMessage" style="display: none;">¡Gracias por compartir tu intención!</p>
       </section>
+      
       
       
       <section class="gift-section">

@@ -138,6 +138,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("intentionForm");
     const intentionInput = document.getElementById("intentionInput");
     const confirmationMessage = document.getElementById("confirmationMessage");
+    const submitButton = document.getElementById("submitButton");
+    const loadingSpinner = document.getElementById("loadingSpinner");
   
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -149,9 +151,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
   
+      // Ocultar el botón y mostrar la rueda giratoria
+      submitButton.style.display = "none";
+      loadingSpinner.style.display = "block";
+  
       try {
-        console.log("Intentando enviar intención:", intention);
-      
         const response = await fetch("https://gxuknip9i1.execute-api.us-east-2.amazonaws.com/proxyapp/proxy", {
           method: "POST",
           headers: {
@@ -159,43 +163,35 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           body: JSON.stringify({ intention }), // Enviar intención como objeto JSON
         });
-      
-        console.log("Respuesta obtenida:", response);
-      
+  
         if (!response.ok) {
-          console.error(`La respuesta no fue exitosa. Status: ${response.status}`);
-          console.error(`Headers de la respuesta:`, Array.from(response.headers.entries()));
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-      
-        let result;
-        try {
-          result = await response.json(); // Procesa la respuesta como JSON
-          console.log("Resultado JSON recibido:", result);
-        } catch (jsonError) {
-          console.error("Error al procesar la respuesta como JSON:", jsonError);
-          throw new Error("La respuesta no es JSON válido.");
-        }
-      
+  
+        const result = await response.json(); // Procesa la respuesta como JSON
+  
         if (response.ok) {
-          console.log("Respuesta exitosa, mostrando mensaje de confirmación.");
+          // Mostrar mensaje de confirmación con estilo
+          confirmationMessage.textContent = "¡Gracias por enviar tu intención!";
           confirmationMessage.style.display = "block";
           intentionInput.value = ""; // Limpiar el campo
+          loadingSpinner.style.display = "none"; // Ocultar la rueda
+  
+          // Hacer que el botón reaparezca después de 3 segundos
           setTimeout(() => {
-            confirmationMessage.style.display = "none";
+            confirmationMessage.style.display = "none"; // Ocultar el mensaje
+            submitButton.style.display = "block"; // Mostrar el botón
           }, 3000);
         } else {
-          console.error("Error en el servidor:", result.error || "Respuesta desconocida");
           alert("Error en el servidor: " + (result.error || "Respuesta desconocida"));
         }
       } catch (error) {
-        console.error("Error capturado en el bloque catch:");
-        console.error("Detalles del error:", error.message || error);
-        console.error("Stack del error:", error.stack || "No disponible");
-        alert("Hubo un problema al conectar con el servidor. Detalles: " + (error.message || "Error desconocido"));
-      
+        console.error("Error:", error);
+        alert("Hubo un problema al conectar con el servidor. " + error.message);
+      } finally {
+        // Asegurarse de que el spinner desaparezca en cualquier caso
+        loadingSpinner.style.display = "none";
       }
-      
     });
   });
   

@@ -604,6 +604,52 @@ header {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
+.button-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  position: relative; /* Necesario para mantener la posición */
+  height: 50px; /* Ajusta según la altura de tu botón */
+}
+
+#submitButton {
+  display: block; /* Asegura que el botón ocupe su espacio inicialmente */
+}
+
+#loadingSpinner {
+  display: none; /* Oculto por defecto */
+  position: absolute; /* Para superponerlo en el mismo espacio */
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #4CAF50; /* Color de la rueda */
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+#confirmationMessage {
+  display: none; /* Oculto por defecto */
+  font-size: 1.5rem;
+  color: #4CAF50; /* Verde para éxito */
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(76, 175, 80, 0.1); /* Fondo sutil */
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #4CAF50; /* Borde verde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras para efecto 3D */
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 /* Sección de Confirmación */
 .confirmation-section {
