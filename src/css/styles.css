@@ -35,7 +35,7 @@ body {
 header {
   position: relative;
   width: 100vw; /* Ancho completo de la pantalla */
-  height: 175vh; /* Alto completo de la pantalla */
+  height: 190vh; /* Alto completo de la pantalla */
   color: var(--text-color);
   background: var(--light-gradient), url('../../assets/images/foto_inicial.png') no-repeat; 
   background-position: center 55%;
@@ -56,22 +56,9 @@ header {
     margin: 0;
     height: 100vh; 
     width: 100vw; 
-    padding: 50px 0; /* Espaciado adicional */
+    background: var(--light-gradient), url('../../assets/images/nosotros2.jpeg') no-repeat; 
+    background-position: center;
   }
-
-  
-  header::before {
-    content: '';
-    position: absolute; /* Cambiado a absolute para moverse con el contenido */
-    top: 0;
-    left: 0;
-    width: 100vw; /* Ancho completo */
-    height: 100vh; /* Ocupa toda la altura del header */
-    background-size: cover; /* Ajusta la imagen al ancho del contenedor */
-    background-blend-mode: multiply;
-    z-index: -1; /* Detrás del contenido del header */
-  }
-
 
   body {
     margin: 0;
