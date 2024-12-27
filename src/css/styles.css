@@ -734,6 +734,22 @@ footer p {
   background-color: #4CAF50;
   color: white;
 }
+.maps-link {
+  font-size: 1.2rem;
+  color: #007BFF; /* Azul característico de enlaces */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: 2px solid #007BFF;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block; /* Para que parezca un botón */
+}
+
+.maps-link:hover {
+  background-color: #007BFF;
+  color: white;
+}
 
 /* Animación */
 @keyframes fadeInConfirmation {
