@@ -79,6 +79,10 @@ header {
     background-blend-mode: multiply;
     z-index: -1; /* Lo colocamos detrás del contenido */
   }
+
+  .flecha-continuar {
+    color: #FF9800; /* Forzar el color naranja cálido */
+  }
 }
 
 
