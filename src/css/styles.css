@@ -81,7 +81,12 @@ header {
   }
 
   .flecha-continuar {
-    color: #FF9800; /* Forzar el color naranja cálido */
+    font-family: 'Arial', sans-serif; /* Cambia según tu fuente */
+    font-size: 2.5rem;
+    color: var(--highlight-color); /* Naranja cálido */
+    margin-top: 20px;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
   }
 }
 
