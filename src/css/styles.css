@@ -35,9 +35,9 @@ body {
 header {
   position: relative;
   width: 100vw; /* Ancho completo de la pantalla */
-  height: 190vh; /* Alto completo de la pantalla */
+  height: 100vh; /* Alto completo de la pantalla */
   color: var(--text-color);
-  background: var(--light-gradient), url('../../assets/images/foto_inicial.png') no-repeat; 
+  background: var(--light-gradient), url('../../assets/images/nosotros2.jpeg') no-repeat; 
   background-position: center 55%;
   background-size: cover;
   animation: fadeIn 1s ease-in-out; /* Animación de entrada */
