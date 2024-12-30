@@ -196,7 +196,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   document.addEventListener("DOMContentLoaded", () => {
+    const solapa = document.querySelector('.indice-solapa');
     const links = document.querySelectorAll('.indice-solapa-links a');
+    const linksContainer = document.querySelector('.indice-solapa-links');
   
     links.forEach(link => {
       link.addEventListener('click', (e) => {
@@ -204,11 +206,28 @@ document.addEventListener("DOMContentLoaded", () => {
         const targetId = e.target.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
   
+        // Scroll suave a la sección
         targetElement.scrollIntoView({
           behavior: 'smooth',
           block: 'start'
         });
+  
+        // Contraer la solapa después del clic
+        solapa.style.width = '60px';
+        linksContainer.style.display = 'none';
       });
+    });
+  
+    // Expandir la solapa al pasar el mouse
+    solapa.addEventListener('mouseover', () => {
+      solapa.style.width = '250px';
+      linksContainer.style.display = 'block';
+    });
+  
+    // Comprimir la solapa al salir el mouse
+    solapa.addEventListener('mouseleave', () => {
+      solapa.style.width = '60px';
+      linksContainer.style.display = 'none';
     });
   });
   
