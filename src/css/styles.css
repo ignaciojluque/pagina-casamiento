@@ -162,13 +162,6 @@ header {
     display: inline-block;
     animation: bounce 1.5s infinite;
   }
-  .nuestra-historia-section {
-    scroll-margin-top: 10px; /* Espacio de 150px desde el top */
-  }
-
-  .intentions-section {
-    scroll-margin-top: 50px; /* Espacio de 150px desde el top */
-  }
 }
 
 
@@ -270,7 +263,7 @@ header {
 
 /* Sección "Nuestra Historia" */
 .nuestra-historia-section {
-  scroll-margin-top: 100px; /* Espacio de 150px desde el top */
+  scroll-margin-top: 20px; 
   padding: 40px 20px;
   background: rgba(255, 198, 152, 0.8);
   border-radius: 15px;
@@ -739,7 +732,7 @@ header {
 
 /* Sección de Confirmación */
 .confirmation-section {
-  scroll-margin-top: 200px; /* Espacio de 150px desde el top */
+  scroll-margin-top: 150px; /* Espacio de 150px desde el top */
   margin-top: 300px; /* Espacio superior */
   margin-bottom: 300px; /* Espacio inferior */
   margin-left: auto; /* Centrado horizontal */
