@@ -19,6 +19,39 @@
   --font-family: 'Sarcolenta'
 }
 
+.indice {
+  position: fixed; /* Para que permanezca visible al hacer scroll */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ocupa todo el ancho */
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras para destacar */
+  padding: 10px 20px;
+  z-index: 1000; /* Asegura que quede por encima del resto */
+}
+
+.indice ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.indice ul li {
+  margin: 0 10px;
+}
+
+.indice ul li a {
+  text-decoration: none;
+  color: #007BFF; /* Azul para los enlaces */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.indice ul li a:hover {
+  color: #FF9800; /* Cambia a naranja al pasar el cursor */
+}
 
 body {
   font-family: 'Sarcolenta';
