@@ -58,14 +58,36 @@
 }
 
 .indice-solapa-tab::before {
-  content: ''; /* Contenido inicial: líneas */
+  content: ''; /* Tres líneas por defecto */
   display: block;
-  width: 20px; /* Ancho de las líneas */
-  height: 2px; /* Grosor de las líneas */
-  background-color: white; /* Color de las líneas */
-  box-shadow: 0 6px white, 0 -6px white; /* Genera las 3 líneas */
-  transition: opacity 0.3s ease; /* Transición suave */
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  box-shadow: 0 6px white, 0 -6px white;
+  transition: opacity 0.3s ease, content 0.3s ease;
 }
+
+.indice-solapa-tab[data-state="expanded"]::before {
+  content: 'Índice'; /* Cambia al texto "Índice" */
+  display: inline-block;
+  background-color: transparent;
+  box-shadow: none; /* Elimina las líneas */
+  width: auto;
+  height: auto;
+  font-size: 1.2rem;
+  line-height: 40px;
+  text-align: center;
+}
+
+.indice-solapa-tab[data-state="default"]::before {
+  content: ''; /* Tres líneas por defecto */
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  box-shadow: 0 6px white, 0 -6px white;
+}
+
 
 .indice-solapa:hover .indice-solapa-tab::before {
   content: 'Índice'; /* Cambia el contenido al texto "Índice" */
