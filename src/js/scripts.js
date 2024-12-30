@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Comprimir la solapa al salir el mouse
     solapa.addEventListener('mouseleave', () => {
-      solapa.style.width = '60px';
+      solapa.style.width = '40px';
       linksContainer.style.display = 'none';
     });
   });

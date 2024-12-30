@@ -29,8 +29,8 @@
   overflow: hidden; /* Evita contenido desbordado */
   z-index: 1000; /* Prioridad alta */
   transition: width 0.3s ease, height 0.3s ease; /* Animación de expansión */
-  width: 60px; /* Ancho inicial cerrado */
-  height: auto; /* Altura ajustada al contenido */
+  width: 40px; /* Ancho inicial cerrado */
+  height: 40px; /* Altura cerrada ajustada al tamaño de la tab */
 }
 
 .indice-solapa:hover {
@@ -39,14 +39,47 @@
 }
 
 .indice-solapa-tab {
-  background-color: var(--highlight-color); /* Naranja cálido */
-  color: white;
-  font-family: var(--font-family);
-  font-size: 1.2rem;
-  padding: 10px;
-  text-align: center;
+  background-color: var(--highlight-color); /* Fondo naranja para el título */
+  width: 40px; /* Ancho inicial reducido */
+  height: 40px; /* Altura inicial */
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
   cursor: pointer;
+  border-radius: 0 8px 8px 0; /* Bordes redondeados */
+  font-family: var(--font-family); /* Fuente personalizada */
+  color: white; /* Color del texto */
+  font-size: 1.2rem; /* Tamaño del texto */
+  transition: width 0.3s ease, content 0.3s ease; /* Transición suave */
 }
+
+.indice-solapa:hover .indice-solapa-tab {
+  width: 250px; /* Expande el ancho del título junto con la solapa */
+}
+
+.indice-solapa-tab::before {
+  content: ''; /* Contenido inicial: líneas */
+  display: block;
+  width: 20px; /* Ancho de las líneas */
+  height: 2px; /* Grosor de las líneas */
+  background-color: white; /* Color de las líneas */
+  box-shadow: 0 6px white, 0 -6px white; /* Genera las 3 líneas */
+  transition: opacity 0.3s ease; /* Transición suave */
+}
+
+.indice-solapa:hover .indice-solapa-tab::before {
+  content: 'Índice'; /* Cambia el contenido al texto "Índice" */
+  display: inline-block; /* Asegura que el texto sea visible */
+  background-color: transparent; /* Elimina el fondo de las líneas */
+  box-shadow: none; /* Elimina las líneas */
+  width: auto; /* Ajusta el ancho al texto */
+  height: auto; /* Ajusta la altura al texto */
+  font-size: 1.2rem; /* Tamaño del texto */
+  line-height: 40px; /* Centrado vertical */
+  text-align: center; /* Centrado horizontal */
+}
+
+
 
 .indice-solapa-links {
   padding: 10px;
