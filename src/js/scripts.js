@@ -1,47 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const scrollArrow = document.querySelector('.flecha-continuar');
-
-  window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-          scrollArrow.style.display = 'none';
-      } else {
-          scrollArrow.style.display = 'block';
-      }
-  });
-
-  const gallery = document.querySelector('.gallery');
-  const images = document.querySelectorAll('.gallery img');
-  const modal = document.getElementById('photoModal');
-  const modalImage = document.getElementById('modalImage');
-  let currentIndex = 0;
-
-  function openModal(index) {
-      currentIndex = index;
+    const modal = document.getElementById('photoModal');
+    const modalImage = document.getElementById('modalImage');
+    const galleryItems = document.querySelectorAll('.gallery-container .gallery-item img');
+    let currentIndex = 0;
+  
+    // Abre el modal con la imagen seleccionada
+    window.openModal = function(index) {
+      currentIndex = index; // Actualiza el índice actual con el de la imagen clickeada
       modal.style.display = 'flex';
-      modalImage.src = images[currentIndex].src;
-  }
-
-  function closeModal() {
+      modalImage.src = galleryItems[currentIndex].src; // Usa la imagen clickeada
+    };
+  
+    // Cierra el modal
+    window.closeModal = function() {
       modal.style.display = 'none';
-  }
-
-  function prevImage() {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      modalImage.src = images[currentIndex].src;
-  }
-
-  function nextImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      modalImage.src = images[currentIndex].src;
-  }
-
-  window.onclick = function(event) {
+    };
+  
+    // Muestra la imagen anterior
+    window.prevImage = function() {
+      currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+      modalImage.src = galleryItems[currentIndex].src;
+    };
+  
+    // Muestra la imagen siguiente
+    window.nextImage = function() {
+      currentIndex = (currentIndex + 1) % galleryItems.length;
+      modalImage.src = galleryItems[currentIndex].src;
+    };
+  
+    // Cierra el modal al hacer clic fuera de la imagen
+    window.onclick = function(event) {
       if (event.target === modal) {
-          closeModal();
+        closeModal();
       }
-  };
-});
-
+    };
+  });
+  
 
 
 const images = document.querySelectorAll('.gallery-item img');

@@ -23,7 +23,7 @@
   position: fixed;
   top: 20px; /* Espaciado desde la parte superior */
   left: 20px; /* Espaciado desde el lado izquierdo */
-  background-color: var(--background-light); /* Fondo neutro */
+  background-color: rgba(247, 245, 243); /* Fondo neutro */
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); /* Sombra */
   border-radius: 8px; /* Bordes redondeados */
   overflow: hidden; /* Evita contenido desbordado */
@@ -595,7 +595,7 @@ header {
   color: var(--text-color);
   border: 2px solid var(--primary-color);
   border-radius: 15px;
-  margin: 300px auto;
+  margin: 200px auto;
   max-width: 700px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   animation: fadeIn 1.5s ease-in-out; /* Animación de entrada */
@@ -635,7 +635,7 @@ header {
   padding: 40px 20px;
   text-align: center;
   border-radius: 15px;
-  margin-top: 300px; /* Espacio superior */
+  margin-top: 200px; /* Espacio superior */
   margin-bottom: 300px; /* Espacio inferior */
   margin-left: auto; /* Centrado horizontal */
   margin-right: auto; /* Centrado horizontal */
