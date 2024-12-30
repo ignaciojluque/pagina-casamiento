@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   
   document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll('.indice a');
+    const links = document.querySelectorAll('.indice-solapa-links a');
   
     links.forEach(link => {
       link.addEventListener('click', (e) => {
