@@ -82,20 +82,19 @@
 }
 
 
-
-
-
 body {
   font-family: 'Sarcolenta';
   margin: 0;
   padding: 0;
-  background: url('../../assets/images/savethedate.jpeg') center/cover no-repeat;
-  background-attachment: fixed;
-  background-blend-mode: multiply;
+  background: url('../../assets/images/savethedate.jpeg') center no-repeat; /* Imagen centrada sin repetición */
+  background-size: 100% auto; /* Asegura que ocupe todo el ancho y alto de la pantalla */
+  background-attachment: fixed; /* La imagen se queda fija mientras haces scroll */
+  background-position: center 75%; /* Cambia el valor según lo que quieras mostrar */
   color: #333;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Evita scroll horizontal */
 }
+
 
 header {
   position: relative;
