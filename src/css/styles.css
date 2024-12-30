@@ -21,40 +21,33 @@
 
 .indice-solapa {
   position: fixed;
-  top: 20px; /* Espaciado desde la parte superior */
-  left: 20px; /* Espaciado desde el lado izquierdo */
+  top: 20px;
+  left: 20px;
   background-color: rgba(247, 245, 243); /* Fondo neutro */
   box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2); /* Sombra */
   border-radius: 8px; /* Bordes redondeados */
   overflow: hidden; /* Evita contenido desbordado */
-  z-index: 1000; /* Prioridad alta */
+  z-index: 1000;
   transition: width 0.3s ease, height 0.3s ease; /* Animación de expansión */
-  width: 40px; /* Ancho inicial cerrado */
-  height: 40px; /* Altura cerrada ajustada al tamaño de la tab */
-}
-
-.indice-solapa:hover {
-  width: 250px; /* Ancho desplegado */
-  height: auto; /* Ajusta la altura al contenido */
+  width: 40px; /* Ancho inicial */
+  height: 40px; /* Altura inicial */
 }
 
 .indice-solapa-tab {
-  background-color: var(--highlight-color); /* Fondo naranja para el título */
-  width: 40px; /* Ancho inicial reducido */
-  height: 40px; /* Altura inicial */
+  background-color: var(--highlight-color); /* Fondo naranja */
+  width: 40px;
+  height: 40px;
   display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  border-radius: 0 8px 8px 0; /* Bordes redondeados */
   font-family: var(--font-family); /* Fuente personalizada */
   color: white; /* Color del texto */
   font-size: 1.2rem; /* Tamaño del texto */
-  transition: width 0.3s ease, content 0.3s ease; /* Transición suave */
+  transition: width 0.3s ease, height 0.3s ease;
 }
-
-.indice-solapa:hover .indice-solapa-tab {
-  width: 250px; /* Expande el ancho del título junto con la solapa */
+.indice-solapa-tab[data-state="expanded"] {
+  width: 250px; /* Expande el fondo naranja al ancho del box */
 }
 
 .indice-solapa-tab::before {
@@ -88,28 +81,12 @@
   box-shadow: 0 6px white, 0 -6px white;
 }
 
-
-.indice-solapa:hover .indice-solapa-tab::before {
-  content: 'Índice'; /* Cambia el contenido al texto "Índice" */
-  display: inline-block; /* Asegura que el texto sea visible */
-  background-color: transparent; /* Elimina el fondo de las líneas */
-  box-shadow: none; /* Elimina las líneas */
-  width: auto; /* Ajusta el ancho al texto */
-  height: auto; /* Ajusta la altura al texto */
-  font-size: 1.2rem; /* Tamaño del texto */
-  line-height: 40px; /* Centrado vertical */
-  text-align: center; /* Centrado horizontal */
-}
-
-
-
 .indice-solapa-links {
-  padding: 10px;
-  display: none; /* Ocultar enlaces por defecto */
+  display: none; /* Ocultar enlaces inicialmente */
 }
 
 .indice-solapa:hover .indice-solapa-links {
-  display: block; /* Mostrar enlaces al hacer hover */
+  display: block; /* Mostrar enlaces al expandir */
 }
 
 .indice-solapa-links ul {
@@ -121,7 +98,7 @@
 }
 
 .indice-solapa-links ul li {
-  margin: 10px 0;
+  margin: 10px 10px;
 }
 
 .indice-solapa-links ul li a {

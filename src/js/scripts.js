@@ -194,18 +194,39 @@ document.addEventListener("DOMContentLoaded", () => {
     const linksContainer = document.querySelector('.indice-solapa-links');
     const tab = document.querySelector('.indice-solapa-tab');
   
-    // Función para cerrar la solapa y restaurar su estado inicial
+    let isExpanded = false; // Estado de la solapa (expandida o no)
+  
+    // Función para expandir la solapa
+    const expandSolapa = () => {
+      linksContainer.style.display = 'block'; // Mostrar enlaces
+      solapa.style.width = '250px'; // Expandir ancho
+      solapa.style.height = 'auto'; // Ajustar altura
+      tab.setAttribute('data-state', 'expanded'); // Cambiar a estado "expanded"
+      isExpanded = true; // Marcar como expandida
+    };
+  
+    // Función para comprimir la solapa
     const resetSolapa = () => {
       linksContainer.style.display = 'none'; // Ocultar enlaces
-      solapa.style.width = '40px'; // Restaurar ancho inicial
-      solapa.style.height = '40px'; // Restaurar altura inicial
-      tab.setAttribute('data-state', 'default'); // Establecer estado a "default" para las tres líneas
+      solapa.style.width = '40px'; // Ancho inicial
+      solapa.style.height = '40px'; // Altura inicial
+      tab.setAttribute('data-state', 'default'); // Cambiar a estado "default"
+      isExpanded = false; // Marcar como comprimida
     };
+  
+    // Alternar entre expandir y comprimir la solapa al hacer clic
+    tab.addEventListener('click', () => {
+      if (isExpanded) {
+        resetSolapa();
+      } else {
+        expandSolapa();
+      }
+    });
   
     // Manejar clic en los enlaces
     linksContainer.addEventListener('click', (e) => {
       if (e.target.tagName === 'A') {
-        e.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+        e.preventDefault(); // Prevenir comportamiento predeterminado del enlace
         const targetId = e.target.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
   
@@ -215,20 +236,9 @@ document.addEventListener("DOMContentLoaded", () => {
           block: 'start',
         });
   
-        // Restaurar la solapa después de hacer clic
+        // Comprimir la solapa después de hacer clic
         resetSolapa();
       }
     });
-  
-    // Mostrar enlaces al pasar el mouse sobre la solapa
-    solapa.addEventListener('mouseenter', () => {
-      linksContainer.style.display = 'block'; // Mostrar enlaces
-      solapa.style.width = '250px'; // Expandir ancho
-      solapa.style.height = 'auto'; // Ajustar altura
-      tab.setAttribute('data-state', 'expanded'); // Cambiar a estado "expanded" para mostrar "Índice"
-    });
-  
-    // Restaurar la solapa al salir del hover
-    solapa.addEventListener('mouseleave', resetSolapa);
   });
   
