@@ -115,6 +115,8 @@ header {
   
 }
 
+
+/*CELULAR*/
 @media (max-width: 768px) {
 
   header {
@@ -161,7 +163,13 @@ header {
     display: inline-block;
     animation: bounce 1.5s infinite;
   }
-  
+  .nuestra-historia-section {
+    scroll-margin-top: 10px; /* Espacio de 150px desde el top */
+  }
+
+  .intentions-section {
+    scroll-margin-top: 50px; /* Espacio de 150px desde el top */
+  }
 }
 
 
